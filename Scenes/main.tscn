@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://hycw366igwln"]
+
+[ext_resource type="PackedScene" uid="uid://bgtu1oxbvq4fb" path="res://Models/structure.blend" id="1_i5kk0"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="2_pxna2"]
+[ext_resource type="Script" path="res://Scenes/eventHandler.gd" id="3_12x8s"]
+[ext_resource type="PackedScene" uid="uid://bvu52em2l561r" path="res://Models/laser.blend" id="3_proki"]
+[ext_resource type="PackedScene" uid="uid://hvo34254kah8" path="res://Models/laserBlue.blend" id="4_bmv7i"]
+[ext_resource type="AudioStream" uid="uid://cwvdwb14nkvqa" path="res://testFiles/testSong.ogg" id="6_liljf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rlnk1"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+ground_curve = 0.905096
+sun_angle_max = 248.89
+sun_curve = 0.974707
+
+[sub_resource type="Sky" id="Sky_hl120"]
+sky_material = SubResource("ProceduralSkyMaterial_rlnk1")
+
+[sub_resource type="Environment" id="Environment_2avjs"]
+background_mode = 2
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_hl120")
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.26
+glow_strength = 1.21
+glow_blend_mode = 0
+glow_hdr_threshold = 1.15
+glow_hdr_scale = 1.6
+glow_hdr_luminance_cap = 36.25
+glow_map_strength = 0.78
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 7.66
+fog_sun_scatter = 0.08
+fog_density = 0.11
+
+[node name="main" type="Node3D"]
+
+[node name="structure" parent="." instance=ExtResource("1_i5kk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284307, 0, 0.111277)
+
+[node name="player" type="Node3D" parent="."]
+script = ExtResource("2_pxna2")
+
+[node name="neck" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.165361, 1.68841, -0.281179)
+
+[node name="camera" type="Camera3D" parent="player/neck"]
+fov = 89.4
+near = 0.002
+
+[node name="eventsHandler" type="Node3D" parent="."]
+script = ExtResource("3_12x8s")
+
+[node name="purpleSpin" type="Node3D" parent="eventsHandler"]
+
+[node name="laser1" parent="eventsHandler/purpleSpin" instance=ExtResource("3_proki")]
+transform = Transform3D(-0.999733, 0.00758324, -0.0218097, -0.0226815, -0.499485, 0.866025, -0.00432634, 0.866289, 0.499524, 0.176533, 6.71007, 6.90657)
+
+[node name="laser2" parent="eventsHandler/purpleSpin" instance=ExtResource("3_proki")]
+transform = Transform3D(0.999742, 0.010607, -0.020066, 0.0226815, -0.499485, 0.866025, -0.000836711, -0.866257, -0.499597, 0.195672, 6.76777, -6.73665)
+
+[node name="laser3" parent="eventsHandler/purpleSpin" instance=ExtResource("3_proki")]
+transform = Transform3D(-0.001203, 0.866261, 0.49959, -0.0226815, -0.499485, 0.866025, 0.999742, -0.0102896, 0.020249, 7.00771, 6.71007, 0.0732212)
+
+[node name="laser4" parent="eventsHandler/purpleSpin" instance=ExtResource("3_proki")]
+transform = Transform3D(-0.00396006, -0.866286, -0.499532, 0.0226815, -0.499485, 0.866025, -0.999735, -0.00790059, 0.0216266, -6.6355, 6.76778, 0.0967059)
+
+[node name="blueSpin" type="Node3D" parent="eventsHandler"]
+transform = Transform3D(0.740253, 2.93884e-08, 0.672328, -2.93884e-08, 1, -1.13539e-08, -0.672328, -1.13539e-08, 0.740253, 0, 5.39157, 0)
+
+[node name="laser1" parent="eventsHandler/blueSpin" instance=ExtResource("4_bmv7i")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, -0.033617, 0, 7.52094)
+
+[node name="laser2" parent="eventsHandler/blueSpin" instance=ExtResource("4_bmv7i")]
+transform = Transform3D(-0.999885, 0.0131043, -0.00756576, 6.6142e-10, 0.5, 0.866025, 0.0151315, 0.865926, -0.499943, -0.033617, 0, -7.38188)
+
+[node name="laser3" parent="eventsHandler/blueSpin" instance=ExtResource("4_bmv7i")]
+transform = Transform3D(0.00127406, -0.866025, 0.5, -4.37114e-08, 0.5, 0.866025, -0.999999, -0.00110339, 0.000636995, 7.41779, -3.25296e-07, 0.0790207)
+
+[node name="laser4" parent="eventsHandler/blueSpin" instance=ExtResource("4_bmv7i")]
+transform = Transform3D(0.0138576, 0.865942, -0.499952, 4.32416e-08, 0.5, 0.866026, 0.999904, -0.0120011, 0.00692873, -7.48502, 3.25296e-07, 0.0600336)
+
+[node name="bpmTimer" type="Timer" parent="eventsHandler"]
+wait_time = 0.433
+autostart = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="eventsHandler"]
+stream = ExtResource("6_liljf")
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="eventsHandler"]
+environment = SubResource("Environment_2avjs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="eventsHandler/WorldEnvironment"]
+transform = Transform3D(-0.999985, -4.0981e-05, 0.00546262, 0.00546277, -0.00746975, 0.999957, -1.74844e-07, 0.999972, 0.00746986, -1.05476, 6.70271, 0.225389)
+light_energy = 0.0
+light_indirect_energy = 1.323
+sky_mode = 2
+
+[connection signal="timeout" from="eventsHandler/bpmTimer" to="eventsHandler" method="_on_bpm_timer_timeout"]
