@@ -11,20 +11,21 @@ var spreadUp = false
 
 # BPM 138.6
 
-var interface : XRInterface
+var interface : MobileVRInterface
 
 func _ready() -> void:
 	interface = XRServer.find_interface("OVRMobile")
+	# get_viewport().use_xr = true
 	if interface and interface.is_initialized():
 		print("yipee")
-		get_viewport().use_xr = true
+		
 
 
 func _process(delta):
 	var spectrum = AudioServer.get_bus_effect_instance(0,0)
 	vocal = ((spectrum.get_magnitude_for_frequency_range(300,4000).x + spectrum.get_magnitude_for_frequency_range(300,4000).y)/2)/1.2
 	bass = ((spectrum.get_magnitude_for_frequency_range(50,200).x + spectrum.get_magnitude_for_frequency_range(50,200).y)/2)/1.2
-	$player/XROrigin3D/camera.environment.fog_light_color = Color(lerp($player/XROrigin3D/camera.environment.fog_light_color.r,vocal*intensity,0.2),0,lerp($player/XROrigin3D/camera.environment.fog_light_color.b,bass*intensity/2,0.2))
+	$player/XROrigin3D/camera.environment.fog_light_color = Color(lerp($player/XROrigin3D/camera.environment.fog_light_color.r,vocal*intensity/4,0.2),0,lerp($player/XROrigin3D/camera.environment.fog_light_color.b,bass*intensity/8,0.2))
 	$purpleSpin.rotate_y(vocal*delta*12*intensity)
 	$spinAbovePurple.rotate_y(-vocal*delta*12*intensity)
 	$blueSpin.rotate_y(bass*delta*12*intensity)

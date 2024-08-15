@@ -47,157 +47,212 @@
 30-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:87-110
 31        android:version="0x400003" />
 31-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:111-137
-32
-33    <application
-33-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:18:5-52:19
-34        android:allowBackup="false"
-34-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:20:9-36
-35        android:appCategory="game"
-35-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:22:9-35
-36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-36-->[androidx.core:core:1.8.0] /Users/aaravk/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
-37        android:debuggable="true"
-38        android:extractNativeLibs="false"
-39        android:hasFragileUserData="false"
-39-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:24:9-43
-40        android:icon="@mipmap/icon"
-40-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:21:9-36
-41        android:isGame="true"
-41-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:23:9-30
-42        android:label="@string/godot_project_name_string"
-42-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:19:9-58
-43        android:requestLegacyExternalStorage="false" >
-43-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:25:9-53
-44        <activity
-44-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:33:9-50:20
-45            android:name="com.godot.game.GodotApp"
-45-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:34:13-37
-46            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-46-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:41:13-141
-47            android:excludeFromRecents="false"
-47-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:38:13-47
-48            android:exported="true"
-48-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:39:13-36
-49            android:label="@string/godot_project_name_string"
-49-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:35:13-62
-50            android:launchMode="singleInstancePerTask"
-50-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:37:13-55
-51            android:resizeableActivity="true"
-51-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:42:13-47
-52            android:screenOrientation="landscape"
-52-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:40:13-50
-53            android:theme="@style/GodotAppSplashTheme" >
-53-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:36:13-55
-54            <intent-filter>
-54-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:45:13-49:29
-55                <action android:name="android.intent.action.MAIN" />
-55-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:17-69
-55-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:25-66
-56
-57                <category android:name="android.intent.category.DEFAULT" />
-57-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:47:17-76
-57-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:47:27-73
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:17-77
-58-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:27-74
-59            </intent-filter>
-60        </activity>
-61        <!-- Records the version of the Godot editor used for building -->
-62        <meta-data
-63            android:name="org.godotengine.editor.version"
-64            android:value="4.2.2.stable" /> <!-- Records the version of the Godot library -->
-65        <meta-data
-65-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:12:9-14:44
-66            android:name="org.godotengine.library.version"
-66-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:13:13-59
-67            android:value="4.2.2.stable" />
-67-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:13-41
-68
-69        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-69-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:9-80
-69-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:18-77
+32    <uses-feature
+32-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:7:5-10:31
+33        android:name="android.hardware.vr.headtracking"
+33-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:8:9-56
+34        android:required="true"
+34-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:9:9-32
+35        android:version="1" />
+35-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:10:9-28
+36
+37    <application
+37-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:18:5-52:19
+38        android:allowBackup="false"
+38-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:20:9-36
+39        android:appCategory="game"
+39-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:22:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.8.0] /Users/aaravk/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:hasFragileUserData="false"
+43-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:24:9-43
+44        android:icon="@mipmap/icon"
+44-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:21:9-36
+45        android:isGame="true"
+45-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:23:9-30
+46        android:label="@string/godot_project_name_string"
+46-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:19:9-58
+47        android:requestLegacyExternalStorage="false" >
+47-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:25:9-53
+48        <meta-data
+48-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:9-125
+49            android:name="com.oculus.supportedDevices"
+49-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:41-83
+50            android:value="quest2|quest3|questpro" />
+50-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:84-122
+51
+52        <activity
+52-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:33:9-50:20
+53            android:name="com.godot.game.GodotApp"
+53-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:34:13-37
+54            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+54-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:41:13-141
+55            android:excludeFromRecents="false"
+55-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:38:13-47
+56            android:exported="true"
+56-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:39:13-36
+57            android:label="@string/godot_project_name_string"
+57-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:35:13-62
+58            android:launchMode="singleInstancePerTask"
+58-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:37:13-55
+59            android:resizeableActivity="true"
+59-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:42:13-47
+60            android:screenOrientation="landscape"
+60-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:40:13-50
+61            android:theme="@style/GodotAppSplashTheme" >
+61-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:36:13-55
+62            <intent-filter>
+62-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:45:13-49:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:17-69
+63-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:25-66
+64
+65                <category android:name="android.intent.category.DEFAULT" />
+65-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:47:17-76
+65-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:47:27-73
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:17-77
+66-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:27-74
+67            </intent-filter>
+68            <intent-filter>
+68-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:33:5-44:21
+69                <action android:name="android.intent.action.MAIN" />
+69-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:17-69
+69-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:46:25-66
 70
-71        <activity
-71-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-22:75
-72            android:name="org.godotengine.godot.utils.ProcessPhoenix"
-72-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:19:13-70
-73            android:exported="false"
-73-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:13-37
-74            android:process=":phoenix"
-74-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-39
-75            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-75-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-72
-76
-77        <provider
-77-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:9-32:20
-78            android:name="androidx.core.content.FileProvider"
-78-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:25:13-62
-79            android:authorities="com.audioverse.exp.fileprovider"
-79-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:13-64
-80            android:exported="false"
-80-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-37
-81            android:grantUriPermissions="true" >
-81-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-47
-82            <meta-data
-82-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-31:64
-83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:17-67
-84                android:resource="@xml/godot_provider_paths" />
-84-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:17-61
-85        </provider>
-86        <provider
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-87            android:name="androidx.startup.InitializationProvider"
-87-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:25:13-67
-88            android:authorities="com.audioverse.exp.androidx-startup"
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:26:13-68
-89            android:exported="false" >
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:27:13-37
-90            <meta-data
-90-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-91-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-92                android:value="androidx.startup" />
-92-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-93        </provider>
-94
-95        <receiver
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-96            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-97            android:directBootAware="false"
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-98            android:enabled="true"
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-99            android:exported="true"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-100            android:permission="android.permission.DUMP" >
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-101            <intent-filter>
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-102                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-103            </intent-filter>
-104            <intent-filter>
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-105                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-106            </intent-filter>
-107            <intent-filter>
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-108                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-109            </intent-filter>
-110            <intent-filter>
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-111                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-112            </intent-filter>
-113        </receiver>
-114    </application>
-115
-116</manifest>
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:17-77
+71-->/Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:27-74
+72
+73                <!--
+74                    Enable access to OpenXR on Oculus mobile devices, no-op on other Android
+75					platforms.
+76                -->
+77                <category android:name="com.oculus.intent.category.VR" />
+77-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:39:6-63
+77-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:39:16-60
+78
+79                <!--
+80                    OpenXR category tag to indicate the activity starts in an immersive OpenXR mode.
+81					See https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#android-runtime-category.
+82                -->
+83                <category android:name="org.khronos.openxr.intent.category.IMMERSIVE_HMD" />
+83-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:43:6-82
+83-->/Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:43:16-79
+84            </intent-filter>
+85        </activity>
+86        <!-- Records the version of the Godot editor used for building -->
+87        <meta-data
+88            android:name="org.godotengine.editor.version"
+89            android:value="4.2.2.stable" /> <!-- Records the version of the Godot library -->
+90        <meta-data
+90-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:12:9-14:44
+91            android:name="org.godotengine.library.version"
+91-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:13:13-59
+92            android:value="4.2.2.stable" />
+92-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:13-41
+93
+94        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+94-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:9-80
+94-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:18-77
+95
+96        <activity
+96-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-22:75
+97            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+97-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:19:13-70
+98            android:exported="false"
+98-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:13-37
+99            android:process=":phoenix"
+99-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-39
+100            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+100-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-72
+101
+102        <provider
+102-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:9-32:20
+103            android:name="androidx.core.content.FileProvider"
+103-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:25:13-62
+104            android:authorities="com.audioverse.exp.fileprovider"
+104-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:13-64
+105            android:exported="false"
+105-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-37
+106            android:grantUriPermissions="true" >
+106-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-47
+107            <meta-data
+107-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-31:64
+108                android:name="android.support.FILE_PROVIDER_PATHS"
+108-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:17-67
+109                android:resource="@xml/godot_provider_paths" />
+109-->[godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:17-61
+110        </provider>
+111
+112        <meta-data
+112-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:13:9-15:83
+113            android:name="org.godotengine.plugin.v2.GodotOpenXRMeta"
+113-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:14:13-69
+114            android:value="org.godotengine.openxr.vendors.meta.GodotOpenXRMeta" />
+114-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:15:13-80
+115        <meta-data
+115-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:19:9-21:36
+116            android:name="com.oculus.vr.focusaware"
+116-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:20:13-52
+117            android:value="true" />
+117-->[godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:21:13-33
+118
+119        <provider
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+120            android:name="androidx.startup.InitializationProvider"
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:25:13-67
+121            android:authorities="com.audioverse.exp.androidx-startup"
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:26:13-68
+122            android:exported="false" >
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:27:13-37
+123            <meta-data
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+124                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+125                android:value="androidx.startup" />
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+126        </provider>
+127
+128        <receiver
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+129            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+130            android:directBootAware="false"
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+131            android:enabled="true"
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+132            android:exported="true"
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+133            android:permission="android.permission.DUMP" >
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+135                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+136            </intent-filter>
+137            <intent-filter>
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+138                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+139            </intent-filter>
+140            <intent-filter>
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+141                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+142            </intent-filter>
+143            <intent-filter>
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+144                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/aaravk/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+145            </intent-filter>
+146        </receiver>
+147    </application>
+148
+149</manifest>
