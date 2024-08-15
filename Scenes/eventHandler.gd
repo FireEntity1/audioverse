@@ -3,7 +3,7 @@ extends Node3D
 var running = false
 var frames = 10
 
-@export var intensity = 1.5
+@export var intensity = 3
 
 var vocal
 var bass
@@ -23,14 +23,10 @@ func _ready() -> void:
 
 func _process(delta):
 	var spectrum = AudioServer.get_bus_effect_instance(0,0)
-	vocal = ((spectrum.get_magnitude_for_frequency_range(300,4000).x + spectrum.get_magnitude_for_frequency_range(300,4000).y)/2)/1.2
-	bass = ((spectrum.get_magnitude_for_frequency_range(50,200).x + spectrum.get_magnitude_for_frequency_range(50,200).y)/2)/1.2
-	$player/XROrigin3D/camera.environment.fog_light_color = Color(lerp($player/XROrigin3D/camera.environment.fog_light_color.r,vocal*intensity/4,0.2),0,lerp($player/XROrigin3D/camera.environment.fog_light_color.b,bass*intensity/8,0.2))
+	vocal = ((spectrum.get_magnitude_for_frequency_range(400,3000).x + spectrum.get_magnitude_for_frequency_range(400,3000).y)/2)/1.2
+	bass = ((spectrum.get_magnitude_for_frequency_range(100,300).x + spectrum.get_magnitude_for_frequency_range(100,300).y)/2)/1.2
 	$purpleSpin.rotate_y(vocal*delta*12*intensity)
-	$spinAbovePurple.rotate_y(-vocal*delta*12*intensity)
 	$blueSpin.rotate_y(bass*delta*12*intensity)
-	$spinAboveBlue.rotate_y(-bass*delta*12*intensity)
-	$player/XROrigin3D/camera.environment.glow_intensity = lerp(clamp(vocal+bass,0.2,1.4),$player/XROrigin3D/camera.environment.glow_intensity,0.1)
 	if spreadUp: 
 		$spread1.rotate_x(-bass*delta*4*intensity)
 		if $spread1.rotation_degrees.x <= -30: spreadUp = false

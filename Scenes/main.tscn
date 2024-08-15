@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/eventHandler.gd" id="3_12x8s"]
 [ext_resource type="PackedScene" uid="uid://bvu52em2l561r" path="res://Models/laser.blend" id="3_proki"]
 [ext_resource type="PackedScene" uid="uid://hvo34254kah8" path="res://Models/laserBlue.blend" id="4_bmv7i"]
-[ext_resource type="AudioStream" uid="uid://cwvdwb14nkvqa" path="res://testFiles/testSong.ogg" id="6_liljf"]
+[ext_resource type="AudioStream" uid="uid://dlnmcb4tr6oms" path="res://testFiles/Primadonna-Nightcore.ogg" id="6_6aaai"]
 [ext_resource type="Environment" uid="uid://dxmofcnyt40ui" path="res://Scenes/main.tres" id="7_f3yw5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rlnk1"]
@@ -50,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284307, 0, 0.111277)
 script = ExtResource("3_12x8s")
 
 [node name="purpleSpin" type="Node3D" parent="eventsHandler"]
-transform = Transform3D(3.04034, 0, 0, 0, 3.04034, 0, 0, 0, 3.04034, 0, -8.00727, 0)
+transform = Transform3D(3.04034, 0, 0, 0, 3.04034, 0, 0, 0, 3.04034, -25.1728, -8.00727, -30.4993)
 
 [node name="laser1" parent="eventsHandler/purpleSpin" instance=ExtResource("3_proki")]
 transform = Transform3D(-0.999733, 0.00758324, -0.0218097, -0.0226815, -0.499485, 0.866025, -0.00432634, 0.866289, 0.499524, 0.176533, 6.71007, 6.90657)
@@ -65,7 +65,7 @@ transform = Transform3D(-0.001203, 0.866261, 0.49959, -0.0226815, -0.499485, 0.8
 transform = Transform3D(-0.00396006, -0.866286, -0.499532, 0.0226815, -0.499485, 0.866025, -0.999735, -0.00790059, 0.0216266, -6.6355, 6.76778, 0.0967059)
 
 [node name="blueSpin" type="Node3D" parent="eventsHandler"]
-transform = Transform3D(2.25062, 8.93509e-08, 2.04411, -8.93509e-08, 3.04034, -3.45198e-08, -2.04411, -3.45198e-08, 2.25062, 0, 8.38496, 0)
+transform = Transform3D(2.25062, 8.93509e-08, 2.04411, -8.93509e-08, 3.04034, -3.45198e-08, -2.04411, -3.45198e-08, 2.25062, 21.3361, 8.38496, -36.8417)
 
 [node name="laser1" parent="eventsHandler/blueSpin" instance=ExtResource("4_bmv7i")]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, -0.033617, 0, 7.52094)
@@ -84,7 +84,7 @@ wait_time = 0.433
 autostart = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="eventsHandler"]
-stream = ExtResource("6_liljf")
+stream = ExtResource("6_6aaai")
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="eventsHandler"]
@@ -107,32 +107,8 @@ current = true
 fov = 89.4
 near = 0.002
 
-[node name="spinAboveBlue" type="Node3D" parent="eventsHandler"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.479243, -12.9792, -0.0681438)
-
-[node name="laserBlue" parent="eventsHandler/spinAboveBlue" instance=ExtResource("4_bmv7i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292711, 12.2579, 0.392581)
-
-[node name="laserBlue2" parent="eventsHandler/spinAboveBlue" instance=ExtResource("4_bmv7i")]
-transform = Transform3D(0.59069, 0, -0.806898, 0, 1, 0, 0.806898, 0, 0.59069, 0.292711, 12.2579, 0.392581)
-
-[node name="laserBlue3" parent="eventsHandler/spinAboveBlue" instance=ExtResource("4_bmv7i")]
-transform = Transform3D(-0.396411, 0, -0.918073, 0, 1, 0, 0.918073, 0, -0.396411, 0.292711, 12.2579, 0.392581)
-
-[node name="spinAbovePurple" type="Node3D" parent="eventsHandler"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.9071, 0.036171)
-
-[node name="laser" parent="eventsHandler/spinAbovePurple" instance=ExtResource("3_proki")]
-transform = Transform3D(0.958008, 0, -0.286742, 0, 1, 0, 0.286742, 0, 0.958008, 0.252852, 11.3583, -0.185008)
-
-[node name="laser2" parent="eventsHandler/spinAbovePurple" instance=ExtResource("3_proki")]
-transform = Transform3D(0.56152, 0, -0.827463, 0, 1, 0, 0.827463, 0, 0.56152, 0.252852, 11.3583, -0.185008)
-
-[node name="laser3" parent="eventsHandler/spinAbovePurple" instance=ExtResource("3_proki")]
-transform = Transform3D(-0.509342, 0, -0.860564, 0, 1, 0, 0.860564, 0, -0.509342, 0.252852, 11.3583, -0.185008)
-
 [node name="spread1" type="Node3D" parent="eventsHandler"]
-transform = Transform3D(0.992918, 0, 0.118803, 0, 1, 0, -0.118803, 0, 0.992918, 17.7853, 16.1458, 32.2172)
+transform = Transform3D(0.992918, 0, 0.118803, 0, 1, 0, -0.118803, 0, 0.992918, -0.950129, 16.1458, 32.2172)
 
 [node name="laser" parent="eventsHandler/spread1" instance=ExtResource("3_proki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493447, 0.465481, 0.160511)
@@ -141,7 +117,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493447, 0.465481, 0.160511)
 transform = Transform3D(0.968627, 0, 0.248521, 0, 1, 0, -0.248521, 0, 0.968627, 0.493447, 0.465481, 0.160511)
 
 [node name="laser3" parent="eventsHandler/spread1" instance=ExtResource("3_proki")]
-transform = Transform3D(0.956509, 0, -0.291704, 0, 1, 0, 0.291704, 0, 0.956509, 0.493447, 0.465481, 0.160511)
+transform = Transform3D(0.956509, 0, -0.291704, 0, 1, 0, 0.291704, 0, 0.956509, 0.493446, 0.465481, 0.160507)
 
 [node name="laser4" parent="eventsHandler/spread1" instance=ExtResource("3_proki")]
 transform = Transform3D(0.712247, 0, -0.701929, 0, 1, 0, 0.701929, 0, 0.712247, 0.493447, 0.465481, 0.160511)
