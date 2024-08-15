@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://hycw366igwln"]
+[gd_scene load_steps=13 format=3 uid="uid://hycw366igwln"]
 
 [ext_resource type="PackedScene" uid="uid://bgtu1oxbvq4fb" path="res://Models/structure.blend" id="1_i5kk0"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="2_pxna2"]
@@ -13,8 +13,8 @@ sky_horizon_color = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 ground_curve = 0.905096
-sun_angle_max = 248.89
-sun_curve = 0.974707
+sun_angle_max = 346.67
+sun_curve = 1.20001
 
 [sub_resource type="Sky" id="Sky_hl120"]
 sky_material = SubResource("ProceduralSkyMaterial_rlnk1")
@@ -33,25 +33,39 @@ glow_hdr_scale = 1.6
 glow_hdr_luminance_cap = 36.25
 glow_map_strength = 0.78
 fog_enabled = true
+fog_light_color = Color(0.224684, 0.00027396, 0.318274, 1)
+fog_light_energy = 0.08
+fog_sun_scatter = 0.03
+fog_density = 0.1573
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldutj"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+sun_angle_max = 360.0
+
+[sub_resource type="Sky" id="Sky_g6yq7"]
+sky_material = SubResource("ProceduralSkyMaterial_ldutj")
+
+[sub_resource type="Environment" id="Environment_o5djd"]
+background_mode = 2
+sky = SubResource("Sky_g6yq7")
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.25
+glow_strength = 1.37
+glow_bloom = 0.17
+glow_blend_mode = 0
+fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
-fog_light_energy = 7.66
-fog_sun_scatter = 0.08
-fog_density = 0.11
+fog_light_energy = 1.76
+fog_sun_scatter = 0.14
 
 [node name="main" type="Node3D"]
 
 [node name="structure" parent="." instance=ExtResource("1_i5kk0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284307, 0, 0.111277)
-
-[node name="player" type="Node3D" parent="."]
-script = ExtResource("2_pxna2")
-
-[node name="neck" type="Node3D" parent="player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.165361, 1.68841, -0.281179)
-
-[node name="camera" type="Camera3D" parent="player/neck"]
-fov = 89.4
-near = 0.002
 
 [node name="eventsHandler" type="Node3D" parent="."]
 script = ExtResource("3_12x8s")
@@ -96,10 +110,15 @@ autoplay = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="eventsHandler"]
 environment = SubResource("Environment_2avjs")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="eventsHandler/WorldEnvironment"]
-transform = Transform3D(-0.999985, -4.0981e-05, 0.00546262, 0.00546277, -0.00746975, 0.999957, -1.74844e-07, 0.999972, 0.00746986, -1.05476, 6.70271, 0.225389)
-light_energy = 0.0
-light_indirect_energy = 1.323
-sky_mode = 2
+[node name="player" type="Node3D" parent="eventsHandler"]
+script = ExtResource("2_pxna2")
+
+[node name="neck" type="Node3D" parent="eventsHandler/player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.165361, 1.68841, -0.281179)
+
+[node name="camera" type="Camera3D" parent="eventsHandler/player/neck"]
+environment = SubResource("Environment_o5djd")
+fov = 89.4
+near = 0.002
 
 [connection signal="timeout" from="eventsHandler/bpmTimer" to="eventsHandler" method="_on_bpm_timer_timeout"]
