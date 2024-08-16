@@ -23,17 +23,17 @@ func _ready() -> void:
 
 func _process(delta):
 	var spectrum = AudioServer.get_bus_effect_instance(0,0)
-	vocal = ((spectrum.get_magnitude_for_frequency_range(400,4000).x + spectrum.get_magnitude_for_frequency_range(400,4000).y)/2)/1.2
-	bass = ((spectrum.get_magnitude_for_frequency_range(130,250).x + spectrum.get_magnitude_for_frequency_range(130,250).y)/2)/1.2
-	# $player/XROrigin3D/camera.environment.fog_light_color = Color(lerp($player/XROrigin3D/camera.environment.fog_light_color.r,vocal*intensity/4,0.2),0,lerp($player/XROrigin3D/camera.environment.fog_light_color.b,bass*intensity/8,0.2))
-	$purpleSpin.rotate_y(lerp($purpleSpin.rotation.y,vocal*delta*12*intensity,1))
-	$blueSpin.rotate_y(lerp($blueSpin.rotation.y,bass*delta*12*intensity,1))
-	if spreadUp: 
-		$spread1.rotate_x(-bass*delta*4*intensity)
-		if $spread1.rotation_degrees.x <= -30: spreadUp = false
-	elif not spreadUp:
-		$spread1.rotate_x(bass*delta*4*intensity)
-		if $spread1.rotation_degrees.x > 30: spreadUp = true
+	vocal = ((spectrum.get_magnitude_for_frequency_range(400,3000).x + spectrum.get_magnitude_for_frequency_range(400,3000).y)/2)/1.2
+	bass = ((spectrum.get_magnitude_for_frequency_range(120,300).x + spectrum.get_magnitude_for_frequency_range(120,300).y)/2)/1.2
+	$purpleSpin.rotate_y(vocal*delta*12*intensity)
+	$blueSpin.rotate_y(bass*delta*12*intensity)
+	$arch3.rotate_z(bass*delta*6*intensity)
+	$arch4.rotate_z(-bass*delta*6*intensity)
+	$arch5.rotate_z(vocal*delta*6*intensity)
+	$arch.rotate_z(vocal*delta*2*intensity)
+	$arch2.rotate_z(-vocal*delta*2*intensity)
+	$spread1.position.y = lerp($spread1.position.y,clampf(-bass*delta*4*intensity,0,-20),0.3)
+	$spread2.position.y = lerp($spread2.position.y,clampf(-bass*delta*4*intensity,0,-20),0.3)
 func _physics_process(delta):
 	
 	if running:
