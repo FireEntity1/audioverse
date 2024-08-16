@@ -27,6 +27,8 @@ func _process(delta):
 	vocal = ((spectrum.get_magnitude_for_frequency_range(400,3000).x + spectrum.get_magnitude_for_frequency_range(400,3000).y)/2)/1.2
 	bass = ((spectrum.get_magnitude_for_frequency_range(120,300).x + spectrum.get_magnitude_for_frequency_range(120,300).y)/2)/1.2
 	$purpleSpin.rotate_y(vocal*delta*12*intensity)
+	$particle.draw_pass_1.material.emission_energy_multiplier = bass*14*intensity
+	$particle.process_material.gravity = Vector3(bass*intensity*2,bass*intensity*2,bass*intensity*2)
 	$blueSpin.rotate_y(bass*delta*12*intensity)
 	$arch3.rotate_z(bass*delta*6*intensity)
 	$arch4.rotate_z(-bass*delta*6*intensity)
@@ -34,11 +36,7 @@ func _process(delta):
 	$arch.rotate_z(vocal*delta*2*intensity)
 	$arch2.rotate_z(-vocal*delta*2*intensity)
 	$glowBars.rotate_z(bass*delta*24*intensity)
-	if running:
-		$spread1.position.y = lerp($spread1.position.y,float(clamp(-bass*delta*5000*intensity,-20,0)),0.1)
-		print(lerp($spread1.position.y,float(clamp(-bass*delta*15000*intensity,-20,0)),1))
-		$spread2.position.y = lerp($spread1.position.y,float(clamp(-bass*delta*5000*intensity,-20,0)),0.1)
-		running = false
+	$glowBars2.rotate_z(-bass*delta*24*intensity)
 func _physics_process(delta):
 	frames += 1
 	if frames >= 30:
