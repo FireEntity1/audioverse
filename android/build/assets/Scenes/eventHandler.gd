@@ -1,7 +1,7 @@
 extends Node3D
 
 var running = false
-var frames = 10
+var frames = 5
 
 @export var intensity = 3
 
@@ -22,6 +22,7 @@ func _ready() -> void:
 
 
 func _process(delta):
+	
 	var spectrum = AudioServer.get_bus_effect_instance(0,0)
 	vocal = ((spectrum.get_magnitude_for_frequency_range(400,3000).x + spectrum.get_magnitude_for_frequency_range(400,3000).y)/2)/1.2
 	bass = ((spectrum.get_magnitude_for_frequency_range(120,300).x + spectrum.get_magnitude_for_frequency_range(120,300).y)/2)/1.2
@@ -32,17 +33,16 @@ func _process(delta):
 	$arch5.rotate_z(vocal*delta*6*intensity)
 	$arch.rotate_z(vocal*delta*2*intensity)
 	$arch2.rotate_z(-vocal*delta*2*intensity)
-	$spread1.position.y = lerp($spread1.position.y,clampf(-bass*delta*4*intensity,0,-20),0.3)
-	$spread2.position.y = lerp($spread2.position.y,clampf(-bass*delta*4*intensity,0,-20),0.3)
-func _physics_process(delta):
-	
+	$glowBars.rotate_z(bass*delta*24*intensity)
 	if running:
-		frames -= 1
-		#$purpleSpin.rotate_y(vocal)
-		#$blueSpin.rotate_y(bass)
-		if frames < 1:
-			running = false
-			frames = 10
+		$spread1.position.y = lerp($spread1.position.y,float(clamp(-bass*delta*5000*intensity,-20,0)),0.1)
+		print(lerp($spread1.position.y,float(clamp(-bass*delta*15000*intensity,-20,0)),1))
+		$spread2.position.y = lerp($spread1.position.y,float(clamp(-bass*delta*5000*intensity,-20,0)),0.1)
+		running = false
+func _physics_process(delta):
+	frames += 1
+	if frames >= 30:
+		running = true
 
 
 func _on_bpm_timer_timeout():

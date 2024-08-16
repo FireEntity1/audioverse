@@ -33,6 +33,7 @@ func _process(delta):
 	$arch5.rotate_z(vocal*delta*6*intensity)
 	$arch.rotate_z(vocal*delta*2*intensity)
 	$arch2.rotate_z(-vocal*delta*2*intensity)
+	$glowBars.rotate_z(bass*delta*24*intensity)
 	if running:
 		$spread1.position.y = lerp($spread1.position.y,float(clamp(-bass*delta*5000*intensity,-20,0)),0.1)
 		print(lerp($spread1.position.y,float(clamp(-bass*delta*15000*intensity,-20,0)),1))
