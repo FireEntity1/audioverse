@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/eventHandler.gd" id="3_12x8s"]
 [ext_resource type="PackedScene" uid="uid://bvu52em2l561r" path="res://Models/laser.blend" id="3_proki"]
 [ext_resource type="PackedScene" uid="uid://hvo34254kah8" path="res://Models/laserBlue.blend" id="4_bmv7i"]
-[ext_resource type="AudioStream" uid="uid://cwvdwb14nkvqa" path="res://testFiles/testSong.ogg" id="6_liljf"]
+[ext_resource type="AudioStream" uid="uid://qn8wu0cdrt34" path="res://songs/testSong.ogg" id="6_liljf"]
 [ext_resource type="Environment" uid="uid://dxmofcnyt40ui" path="res://Scenes/main.tres" id="7_f3yw5"]
 [ext_resource type="PackedScene" uid="uid://dr51lcm858tqb" path="res://Models/arch.blend" id="9_1mjnp"]
 [ext_resource type="PackedScene" uid="uid://b3606jywxj4n0" path="res://Models/glowBars.blend" id="10_illd0"]
@@ -79,7 +79,7 @@ transform = Transform3D(0.0138576, 0.865942, -0.499952, 4.32416e-08, 0.5, 0.8660
 wait_time = 0.433
 autostart = true
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="eventsHandler"]
+[node name="player2" type="AudioStreamPlayer3D" parent="eventsHandler"]
 stream = ExtResource("6_liljf")
 autoplay = true
 
@@ -102,6 +102,10 @@ environment = ExtResource("7_f3yw5")
 current = true
 fov = 89.4
 near = 0.002
+
+[node name="XRController3D" type="XRController3D" parent="eventsHandler/player/XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51019, 0)
+tracker = &"right_hand"
 
 [node name="arch" parent="eventsHandler" instance=ExtResource("9_1mjnp")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.127712, 0.721175, -11.6542)
@@ -137,4 +141,15 @@ process_material = SubResource("ParticleProcessMaterial_61gsj")
 draw_pass_1 = SubResource("TextMesh_l23wn")
 draw_skin = SubResource("Skin_0w35a")
 
+[node name="fileChoose" type="FileDialog" parent="eventsHandler"]
+title = "Open a File"
+position = Vector2i(0, 36)
+size = Vector2i(498, 159)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
 [connection signal="timeout" from="eventsHandler/bpmTimer" to="eventsHandler" method="_on_bpm_timer_timeout"]
+[connection signal="button_released" from="eventsHandler/player/XROrigin3D/XRController3D" to="eventsHandler" method="_on_xr_controller_3d_button_released"]
+[connection signal="file_selected" from="eventsHandler/fileChoose" to="eventsHandler" method="_on_file_choose_file_selected"]

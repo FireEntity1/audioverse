@@ -6,9 +6,9 @@ INJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.x
 manifest
 ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:2:1-54:12
 MERGED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:2:1-53:12
 MERGED from [godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:2:1-35:12
 MERGED from [godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.fragment:fragment:1.6.2] /Users/aaravk/.gradle/caches/transforms-3/a1052a08c437a0cfe93531a0770d912d/transformed/fragment-1.6.2/AndroidManifest.xml:17:1-22:12
@@ -72,7 +72,7 @@ application
 ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:18:5-52:19
 MERGED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:18:5-52:19
 MERGED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:18:5-52:19
-INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:14:5-47:19
+INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:19:5-52:19
 MERGED from [godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:9:5-33:19
 MERGED from [godot-lib.template_debug.aar] /Users/aaravk/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:9:5-33:19
 MERGED from [godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:12:5-22:19
@@ -105,7 +105,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/aaravk/.gradle/cache
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:20:9-36
 		REJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:20:9-36
 	tools:replace
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:21:9-143
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:26:9-143
 	android:isGame
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:23:9-30
 		REJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:23:9-30
@@ -118,7 +118,7 @@ MERGED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml
 MERGED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:33:9-50:20
 REJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:45:13-49:29
 	tools:node
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:26:154-186
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:31:154-186
 	android:screenOrientation
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:40:13-50
 		REJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:40:13-50
@@ -147,7 +147,7 @@ REJECTED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.x
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:36:13-55
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:36:13-55
 	tools:replace
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:26:58-153
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:31:58-153
 	android:name
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:34:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
@@ -164,49 +164,71 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:17-77
 	android:name
 		ADDED from /Users/aaravk/Documents/audioverse/android/build/AndroidManifest.xml:48:27-74
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.INTERNAL_SYSTEM_WINDOW
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:5-75
+	android:name
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:22-72
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:14:5-82
+	android:name
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:14:22-79
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:15:5-107
+	android:maxSdkVersion
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:15:78-104
+	android:name
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:15:22-77
 uses-permission#android.permission.INTERNET
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:11:5-67
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:16:5-67
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:11:22-64
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:16:22-64
 uses-feature#android.hardware.vulkan.level
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:5-132
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:17:5-132
 	android:version
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:110-129
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:17:110-129
 	tools:node
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:19-39
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:17:19-39
 	android:required
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:85-109
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:17:85-109
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:12:40-84
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:17:40-84
 uses-feature#android.hardware.vulkan.version
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:5-140
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:18:5-140
 	android:version
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:111-137
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:18:111-137
 	tools:node
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:19-39
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:18:19-39
 	android:required
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:87-110
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:18:87-110
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:13:40-86
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:18:40-86
 meta-data#com.oculus.supportedDevices
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:9-125
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:29:9-125
 REJECTED from [godotopenxrmeta-debug.aar] /Users/aaravk/.gradle/caches/transforms-3/8446baab8a2d772242734cd98de8c7fc/transformed/jetified-godotopenxrmeta-debug/AndroidManifest.xml:16:9-18:54
 	tools:node
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:20-40
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:29:20-40
 	android:value
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:84-122
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:29:84-122
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:24:41-83
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:29:41-83
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:com.oculus.intent.category.VR+category:name:org.khronos.openxr.intent.category.IMMERSIVE_HMD
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:33:5-44:21
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:38:5-49:21
 category#com.oculus.intent.category.VR
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:39:6-63
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:44:6-63
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:39:16-60
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:44:16-60
 category#org.khronos.openxr.intent.category.IMMERSIVE_HMD
-ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:43:6-82
+ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:48:6-82
 	android:name
-		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:43:16-79
+		ADDED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml:48:16-79
 uses-sdk
 INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/aaravk/Documents/audioverse/android/build/src/debug/AndroidManifest.xml
